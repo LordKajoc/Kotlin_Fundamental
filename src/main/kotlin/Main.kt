@@ -122,9 +122,9 @@ fun main(args: Array<String>) {
     val tokoAClose = 16
     val nowHour = 20
 
-    val tokoBuka = if (nowHour >= tokoAOpen && nowHour <= tokoAClose){
+    val tokoBuka = if (nowHour >= tokoAOpen && nowHour <= tokoAClose) {
         true
-    }else{
+    } else {
         false
     }
     // disederhanakan
@@ -133,14 +133,14 @@ fun main(args: Array<String>) {
     println("TOko A Buka: $tokoBuka")
 
     //Disjucntion atau OR (||)
-    val tokoTutup = nowHour <tokoAOpen || nowHour > tokoAClose
+    val tokoTutup = nowHour < tokoAOpen || nowHour > tokoAClose
     println("TOko A Tutup: $tokoTutup")
 
     //Negation atau NOT (!)
     val tokoItuBuka = nowHour > tokoAOpen
-    if (!tokoItuBuka){
+    if (!tokoItuBuka) {
         println("Toko Tutup")
-    }else{
+    } else {
         println("Toko Buka")
     }
 
@@ -169,10 +169,39 @@ fun main(args: Array<String>) {
 
     //konversi type data to numbers
     val byteNumber: Byte = 10
-    val intNumber:Int = byteNumber.toInt()
+    val intNumber: Int = byteNumber.toInt()
     val stringNumber = "23"
     println(intNumber + stringNumber.toInt())
 
     //Program 14
+    //Arrays
+    //    intArrayOf() : IntArray
+    //    booleanArrayOf() : BooleanArray
+    //    charArrayOf() : CharArray
+    //    longArrayOf() : LongArray
+    //    shortArrayOf() : ShortArray
+    //    byteArrayOf() : ByteArray
     println("Program 14")
+    val intArray = intArrayOf(1, 3, 5, 7)
+    print(intArray[2])
+    //output index 2 adalah 5. perhitungan index dimulai dari 0
+
+    //Program 15
+    //Nullable types (?)
+    println("Program 15")
+    val textnull:String? = null
+    if (textnull!=null){
+        val textLength = textnull!!.length
+        println(textLength)
+    }
+
+    //program 16
+    //Safe Calls dan elvis (? dan ?:)
+    val textSafe:String? = null
+    textSafe?.length
+    val textLengthElvis = textnull?.length ?:7 //sama dengan val textLengthElvis = if(textLengthElvis != null) textNull.length else 7
+    val textLengthElvis2 = textnull!!.length
+
+    //Program 17
+
 }
