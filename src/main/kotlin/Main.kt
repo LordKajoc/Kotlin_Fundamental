@@ -203,5 +203,13 @@ fun main(args: Array<String>) {
     val textLengthElvis2 = textnull!!.length
 
     //Program 17
-
+    val name17 = "Kotlin"
+    println("My name is " + name17)
+    //output : My name is Kotlin
+    val old = 3
+    println("My name is $name17, im $old years old")
+    //output : My name is Kotlin, im 3 years old
+    val hour = 7
+    println("Office ${if (hour > 7) "already close" else "is open"}")
+    //output : Office is open
 }
